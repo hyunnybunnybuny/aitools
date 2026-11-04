@@ -19,11 +19,7 @@ macOS(Mac Studio 포함)와 Windows의 DSH 데스크톱 앱에서 사용할 수 
 
 ## 설치
 
-아래 두 방법 중 하나를 사용하세요. 저장소를 먼저 클론합니다.
-
-```bash
-git clone https://github.com/hyunnybunnybuny/aitools.git
-```
+아래 두 방법 중 하나를 사용하세요.
 
 ### 방법 1 — 설치 스크립트
 
@@ -45,7 +41,7 @@ DSH_PROFILE_DIR="$HOME/.dsh/profiles/desktop" sh install.sh
 
 설치 후 **DSH 데스크톱을 재시작**하면 왼쪽 LNB에 `DeepSeek Chat`이 나타납니다.
 
-### 방법 2 — DSH Plugins 페이지에서 로컬 경로 설치 (권장)
+### 방법 2 — DSH Plugins 페이지에서 로컬 경로 설치
 
 1. 이 저장소를 클론합니다.
 2. DSH 데스크톱 왼쪽 LNB에서 **Plugins(플러그인)** 를 엽니다.
