@@ -9,7 +9,7 @@ set -eu
 say() { printf '%s\n' "$*"; }
 die() { printf 'error: %s\n' "$*" >&2; exit 1; }
 
-SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+SCRIPT_DIR=$(CDPATH= cd "$(dirname "$0")" && pwd)
 PROFILE_DIR=${DSH_PROFILE_DIR:-"$HOME/.dsh/profiles/desktop"}
 PROFILE_JSON="$PROFILE_DIR/package.json"
 PLUGIN_ID="dsh-deepseek-web"
@@ -49,7 +49,7 @@ NODE_BIN=$(find_node)
 
 find_pnpm() {
   local node_dir
-  node_dir=$(CDPATH= cd -- "$(dirname -- "$NODE_BIN")" 2>/dev/null && pwd)
+  node_dir=$(CDPATH= cd "$(dirname "$NODE_BIN")" 2>/dev/null && pwd)
   for candidate in \
     "$node_dir/../../pnpm/bin/pnpm.mjs" \
     "$HOME/.dsh/dsh-runtimes/dsh-primary-runtime/dependencies/pnpm/bin/pnpm.mjs" \
